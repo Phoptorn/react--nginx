@@ -1,0 +1,10 @@
+version: '3.9'
+services:
+    web:
+        image: nginx:1.13.0-alpine
+        container_name: docker-compose--nginx--react
+        restart: always
+        ports:
+        - "9001:80"
+        volumes:
+        - ./data/react-nginx:/usr/share/nginx/html
